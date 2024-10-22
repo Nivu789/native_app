@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Text, View, SafeAreaView, StyleSheet, Image, Alert } from 'react-native'
+import { Text, View, SafeAreaView, StyleSheet, Image } from 'react-native'
 import { Poppins_200ExtraLight, Poppins_400Regular, Poppins_600SemiBold, useFonts } from '@expo-google-fonts/poppins';
 
 const downArrow = require('../assets/images/down-arrow.png')
@@ -25,6 +25,7 @@ const dashboard = () => {
     if (!fontsLoaded) {
         return null
     }
+
 
 
     return (
@@ -73,8 +74,6 @@ const dashboard = () => {
                     </View>
                     <View style={{display:"flex",justifyContent:"space-between",flexDirection:"row",alignItems:"center"}}>
                         <View style={{height:5,width:"80%",flexDirection:"row",backgroundColor:"gainsboro",borderTopLeftRadius:10,borderBottomLeftRadius:10,borderBottomRightRadius:10,borderTopRightRadius:10}}>
-                            {/* <View style={{ backgroundColor: "orange",height:"100%",width:"15%",borderTopLeftRadius:10,borderBottomLeftRadius:10 }}></View>
-                            <View style={{ backgroundColor: "blue",height:"100%",width:"25%" }}></View> */}
                             <View style={{ backgroundColor: "darkviolet",height:"100%",width:"70%",borderBottomRightRadius:10,borderTopRightRadius:10  }}></View>
                         </View>
                         <Text style={styles.smallText}>Left $186</Text>
@@ -86,8 +85,6 @@ const dashboard = () => {
                     </View>
                     <View style={{display:"flex",justifyContent:"space-between",flexDirection:"row",alignItems:"center"}}>
                         <View style={{height:5,width:"80%",flexDirection:"row",backgroundColor:"gainsboro",borderTopLeftRadius:10,borderBottomLeftRadius:10,borderBottomRightRadius:10,borderTopRightRadius:10}}>
-                            {/* <View style={{ backgroundColor: "orange",height:"100%",width:"15%",borderTopLeftRadius:10,borderBottomLeftRadius:10 }}></View>
-                            <View style={{ backgroundColor: "blue",height:"100%",width:"25%" }}></View> */}
                             <View style={{ backgroundColor: "darkviolet",height:"100%",width:"50%",borderBottomRightRadius:10,borderTopRightRadius:10  }}></View>
                         </View>
                         <Text style={styles.smallText}>Left $120</Text>

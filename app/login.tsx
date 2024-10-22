@@ -1,4 +1,4 @@
-import { SafeAreaView, View ,Text,StyleSheet, Pressable,Image,ImageBackground, Alert} from "react-native";
+import { SafeAreaView, View ,Text,StyleSheet, Pressable,Image,ImageBackground, Alert,ToastAndroid} from "react-native";
 import { TextInput } from "react-native";
 import { useState } from "react";
 import { router } from "expo-router";
@@ -27,6 +27,7 @@ export default function Login(){
             const userExist = users.find((item)=>item.username==username)
                 if(userExist){
                     if(userExist.password==password){
+                        ToastAndroid.show(`Welcome back ${username}`,ToastAndroid.SHORT)
                         router.push(`/dashboard?username=${encodeURIComponent(username)}`)
                     }else{
                         Alert.alert("Oops","Invalid credentials")
